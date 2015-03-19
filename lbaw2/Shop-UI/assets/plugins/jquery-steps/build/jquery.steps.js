@@ -540,6 +540,7 @@ function initialize(options)
 {
     /*jshint -W040 */
     var opts = $.extend(true, {}, defaults, options);
+    opts.startIndex = 1;
 
     return this.each(function ()
     {
@@ -561,7 +562,7 @@ function initialize(options)
         registerEvents(wizard, opts);
 
         // Trigger focus
-        if (opts.autoFocus && _uniqueId === 0)
+        if (opts.autoFocus && _uniqueId === 1)
         {
             getStepAnchor(wizard, opts.startIndex).focus();
         }
@@ -597,7 +598,6 @@ function insertStep(wizard, options, state, index, step)
         throwError(_indexOutOfRangeErrorMessage);
     }
 
-    // TODO: Validate step object
 
     // Change data
     step = $.extend({}, stepModel, step);
@@ -621,6 +621,7 @@ function insertStep(wizard, options, state, index, step)
     if (index === 0)
     {
         contentContainer.prepend(body).prepend(header);
+
     }
     else
     {
@@ -1144,6 +1145,8 @@ function renderTitle(wizard, options, state, header, index)
     if (state.currentIndex > index)
     {
         stepItem.addClass("done");
+        if(index == 0)
+            stepItem.addClass("disabled");
     }
 
     header._id(uniqueHeaderId).attr("tabindex", "-1").addClass("title");
