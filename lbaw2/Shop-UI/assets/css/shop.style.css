@@ -1676,7 +1676,6 @@ li:first-child {
 .slider-snap-text span:after {
 	left: 0;
 	top: -1px;
-	content: "\0024";
 	position: absolute;
 }
 
