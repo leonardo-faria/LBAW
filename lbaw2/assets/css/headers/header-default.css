@@ -19,27 +19,16 @@
 
 /*Top Bar (login, search etc.)
 ------------------------------------*/
-
 .header .topbar {
 	z-index: 12;
 	padding: 8px 0;
 	position: relative;
 }
 
-.logo {
-	background-image: url("../../img/thumb.png");
-	background-repeat: no-repeat;
-}
-
 @media (max-width: 991px) {
 	.header .topbar {
 		margin-bottom: 20px;
 	}
-	.logo {
-	background-image: url("../../img/thumb-small.png");
-	background-repeat: no-repeat;
-	padding-top: 0px;
-}
 }
 
 .header .topbar ul.loginbar {
@@ -163,18 +152,16 @@
 
 /*Logo*/
 .header .logo {
-	height: 50%;
-	width: 324px;
+	height: 100%;
+	width: 100px;
 	display: table-cell;
 	vertical-align: middle;
-	padding-top: 70px;
 }
 
 .header .logo img {
 	z-index: 1;
+	margin: 20px 0;
 	position: relative;
-	margin-top: 30px;
-	margin-left: 30px;
 }
 
 /*Big Logo Style*/
