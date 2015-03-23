@@ -37,7 +37,22 @@
 /**/
 .sky-form {
   box-shadow: none;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
+}
+.reservation{
+   max-width: 400px;
+   border: 2px solid #eee;
+   margin-top: 40px;
+   margin-left: 40px;
+   border-top: 2px solid #72c02c;
+}
+.background-reservation{
+  position: relative;
+  max-width: 400px;
+}
+
+.reservation-box{
+   margin-top: 40px;
 }
 
 .sky-form header {
